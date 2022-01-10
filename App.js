@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+mport React, {useState} from 'react';
 import ThemeContext from './Context/ThemeContext';
 import Header from './Components/Header';
 import HeroSection from './Components/HeroSection';
 
 
 const App = ()=>{
-  const themeHook = useState("light");
+  const [themeHook, setThemeHook] = useState("light");
   return (
-    <ThemeContext.Provider value={themeHook}>
+    // console.log(themeHook);
+    <ThemeContext.Provider value={{data:[themeHook]}}>
       <div>
         <Header/>
         <HeroSection/>
